@@ -26,5 +26,10 @@ app.post('/', (request, response) => {
   response.render('todos', { todos: todos, total_requests: total_requests });
 });
 
+app.get('/api/todos', (request, response) => {
+  response.json(todos);
+});
+
+
 console.log('Running on http://localhost:3000/');
 app.listen(3000);
