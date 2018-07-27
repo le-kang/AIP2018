@@ -1,0 +1,11 @@
+{
+  "name": "aip2018",
+  "version": "1.0.0",
+  "description": "This is a repository that provides sample codes and supplementary notes for UTS FEIT subject Advanced Internet Programming.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Le Kang",
+  "license": "MIT"
+}

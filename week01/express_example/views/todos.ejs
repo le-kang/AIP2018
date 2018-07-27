@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Express demo - Todo List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="card m-5">
+        <h3 class="card-header">Todo List</h3>
+        <div class="card-body">
+            <form action="/" method="post">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="todo" placeholder="What needs to be done?">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </form>
+            <ul class="list-group mt-2">
+                <% todos.forEach(function(todo){ %>
+                    <li class="list-group-item"><%= todo %></li>
+                <% }); %>
+            </ul>
+        </div>
+        <div class="card-footer text-muted">Total requests that server handled: <%= total_requests %></div>
+    </div>
+</div>
+</body>
+</html>
