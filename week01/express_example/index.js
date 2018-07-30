@@ -7,8 +7,11 @@ const todos = [];
 
 // use ejs as view engine
 app.set('view engine', 'ejs');
-// for parsing urlencoded bodies for request Content-Type matches application/x-www-form-urlencoded
+// for parsing application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
+// for parsing application/json
+app.use(bodyParser.json());
+
 // use middleware to count the total number of requests that server handled
 app.use((request, response, next) => {
   total_requests++;
