@@ -1,4 +1,4 @@
-# Week 1: Get start with Git commands and Nodejs
+# Week 1: Get started with Git commands and Nodejs
 
 ## Git
 
