@@ -21,7 +21,7 @@ In class we used `npm init` to create a nodejs project and `npm install [package
 
 ## An Express framework example
 
-A simple **Todo List** express app is provided in [express_example](./express_example). The app is partially finished as it only allows to add new todo, without editing and deleting function. They will be covered in the future. 
+A simple **Todo List** express app is provided in [express-example](./express-example). The app is partially finished as it only allows to add new todo, without editing and deleting function. They will be covered in the future. 
 
 The source code demonstrates following features of express:
 
@@ -33,7 +33,7 @@ The source code demonstrates following features of express:
 
 To run the app:
 ```bash
-cd week01/express_example
+cd week01/express-example
 npm install 
 npm start  # Check the 'scripts' key in package.json and see how the 'start' command is configured. 
 ```
