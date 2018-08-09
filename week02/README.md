@@ -7,6 +7,7 @@ This week, two simple Todo List apps ([angular-example](./angular-example) and [
 To run the Angular example app:
 ```bash
 cd angular-example
+npm install
 npm start # or using ng serve --open
 ```
 It is recommended to install `@angular/cli` globally in your own computer. You can use `ng` to generate components and services. It is a very handy tool for Angular development. Following are the commands I used while developing the Todo List app with Angular:
@@ -19,6 +20,7 @@ ng generate service todo
 To run the React example app:
 ```bash
 cd react-example
+npm install
 npm start
 ```
 You can use `npx` to execute `create-react-app` without installing it globally. 

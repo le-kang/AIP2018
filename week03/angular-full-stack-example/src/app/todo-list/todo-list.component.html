@@ -1,0 +1,9 @@
+<ul class="list-group mt-2">
+  <li *ngFor="let todo of todos" class="list-group-item">
+    {{todo.content}}
+    <button type="button" class="btn btn-link btn-sm float-right" style="line-height: 1;"
+            (click)="deleteTodo(todo.id)">
+      Delete
+    </button>
+  </li>
+</ul>

@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="card m-5">
+    <h3 class="card-header">{{title}}</h3>
+    <div class="card-body">
+      <app-todo (todosUpdate)="onTodosUpdated($event)"></app-todo>
+      <app-todo-list [todos]="todos" (todosUpdate)="onTodosUpdated($event)"></app-todo-list>
+    </div>
+  </div>
+</div>
