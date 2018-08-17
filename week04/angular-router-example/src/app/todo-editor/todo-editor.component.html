@@ -1,0 +1,19 @@
+<h3 class="card-header">Edit todo</h3>
+<div class="card-body">
+  <p *ngIf="!fetched">Fetching todo item...</p>
+  <form *ngIf="fetched && todo">
+    <div class="form-group">
+      <input [(ngModel)]="todo.content" type="text" class="form-control" name="todo">
+    </div>
+    <div class="form-group form-check">
+      <input [(ngModel)]="todo.done" type="checkbox" class="form-check-input"
+             name="completed" id="isTodoCompleted">
+      <label class="form-check-label" for="isTodoCompleted">Completed</label>
+    </div>
+    <div class="form-group clearfix">
+      <button type="button" class="btn btn-primary float-right mr-2"
+              (click)="updateTodo()">Submit</button>
+      <a routerLink="/todo-list" class="btn btn-danger float-right mr-2">Cancel</a>
+    </div>
+  </form>
+</div>
