@@ -9,7 +9,7 @@ class App extends Component {
       <div className="container">
         <div className="card m-5">
           <h3 className="card-header">
-            {this.props.location.pathname === '/' ? 'Todo List' : 'Edit Todo'}
+            {this.props.location.pathname === '/todo-list' ? 'Todo List' : 'Edit Todo'}
           </h3>
           <Switch>
             <Route exact path='/todo-list' component={TodoList}/>
