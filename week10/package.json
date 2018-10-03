@@ -1,0 +1,11 @@
+{
+  "name": "week10",
+  "version": "1.0.0",
+  "scripts": {
+    "populate": "node populate.js",
+    "mongo": "mkdir -p ./data && mongod --dbpath ./data --logpath ./log"
+  },
+  "dependencies": {
+    "mongoose": "^5.3.1"
+  }
+}
