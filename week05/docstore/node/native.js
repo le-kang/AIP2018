@@ -14,7 +14,8 @@ MongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
     // Create sample data
     // ------------------------------------------------
     db.collection('people')
-        .drop() // Remove existing people
+        .insertOne({})          // Create one to ensure that .drop() won't fail
+        .then(() => db.collection('people').drop()) // Remove existing people
         .then(() => {
             db.collection('people').createIndex('name');
             db.collection('people').insertOne({name: 'Alice', age: 34, location: ['Sydney', 'New South Wales']});

@@ -1,5 +1,5 @@
 {
-  "name": "angular-full-stack-example",
+  "name": "angular-router-example",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -22,6 +22,7 @@
     "@angular/router": "^6.1.0",
     "core-js": "^2.5.4",
     "express": "^4.16.3",
+    "lodash": "^4.17.10",
     "rxjs": "^6.0.0",
     "uuid": "^3.3.2",
     "zone.js": "~0.8.26"

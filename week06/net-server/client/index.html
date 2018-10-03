@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Callback/Async Demo</title>
+    </head>
+    <body>
+        Use the developer console to experiment with this code.
+    </body>
+    <script>
+        function count(endpoint) {
+            fetch(endpoint).then(
+                (res) => res.json().then((json) => console.log(json))
+            )
+        }
+
+        function safeCount(endpoint) {
+            fetch(
+                endpoint
+            ).then(
+                (response) => {
+                    if (response.ok) {
+                        console.log('Success!')
+                        response.json().then(console.log)
+                    } else
+                        console.log('Error code: ' + response.status);
+                }
+            ).catch(
+                (err) => {
+                    console.log('Error: ' + err);
+                }
+            );
+        }
+
+        async function safeAwaitCount(endpoint) {
+            try {
+                let response = await fetch(endpoint);
+                if (response.ok) {
+                    let json = await response.json();
+                    console.log(json);
+                } else {
+                    console.log('Error code: ' + response.status);
+                }
+            } catch (err) {
+                console.log('Error: ' + err);
+            }
+        }
+
+    </script>
+</html>

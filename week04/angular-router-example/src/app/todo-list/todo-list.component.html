@@ -1,0 +1,19 @@
+<h3 class="card-header">Todo List</h3>
+<div class="card-body">
+  <app-todo (todosUpdate)="onTodosUpdated($event)"></app-todo>
+  <ul class="list-group mt-2">
+    <li *ngFor="let todo of todos" class="list-group-item">
+      <span [ngStyle]="{'text-decoration': todo.done ? 'line-through' : 'none'}">
+        {{todo.content}}
+      </span>
+      <button type="button" class="btn btn-link btn-sm float-right" style="line-height: 1;"
+              (click)="deleteTodo(todo.id)">
+        Delete
+      </button>
+      <a routerLink="/todo-editor/{{todo.id}}" class="btn btn-link btn-sm float-right"
+         style="line-height: 1;">
+        Edit
+      </a>
+    </li>
+  </ul>
+</div>

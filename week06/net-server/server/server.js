@@ -42,31 +42,45 @@ function doCrash(req, res, next) {
         next();
 }
 
+// GET /fast
+// Increments and returns the current page quickly
 app.get('/fast', (req, res) => {
     res.json({count: ++counter});
 });
 
+// GET /slow
+// Increments and returns the current page slowly
 app.get('/slow', doSlow, (req, res) => {
     res.json({count: ++counter});
 });
 
+// GET /slower
+// Increments and returns the current page very slow (with headers sent first)
 app.get('/slower', doSlow, doSlower, (req, res) => {
     res.write(JSON.stringify({count: ++counter}))
     res.end();
 });
 
+// GET /error
+// Increments and returns the current page, but sometimes fails
 app.get('/error', doError, (req, res) => {
     res.json({count: ++counter});
 });
 
+// GET /crash
+// Increments and returns the current page, but sometimes crashes NodeJS
 app.get('/crash', doCrash, (req, res) => {
     res.json({count: ++counter});
 });
 
+// GET /terrible
+// Increments and returns the current page, but fails in many ways
 app.get('/terrible', doSlow, doError, doCrash, (req, res) => {
     res.json({count: ++counter});
 });
 
+// GET /show
+// Prints the submitted body, and returns success.
 app.use(bodyParser.json());
 app.post('/show', (req, res) => {
     console.log('Data: ' + JSON.stringify(req.body));

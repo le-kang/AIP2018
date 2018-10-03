@@ -1,0 +1,13 @@
+{
+  "name": "net-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "forever --minUptime 1 --spinSleepTime 1 server/server.js",
+    "once": "node server/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "forever": "^0.15.3"
+  }
+}
